@@ -1,6 +1,7 @@
 package com.example.clean
 
 import android.app.Application
+import com.example.clean.di.presentationModule
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
@@ -8,5 +9,6 @@ import org.kodein.di.android.x.androidXModule
 class App : Application(), KodeinAware {
 	override val kodein = Kodein.lazy {
 		import(androidXModule(this@App))
+		import(presentationModule)
 	}
 }
