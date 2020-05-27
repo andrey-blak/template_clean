@@ -5,6 +5,7 @@ import com.example.clean.feature.hello.HelloViewModel
 import com.example.clean.util.viewmodel.KodeinViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
+import org.kodein.di.generic.instance
 import org.kodein.di.generic.provider
 import org.kodein.di.generic.singleton
 
@@ -13,6 +14,6 @@ val presentationModule = Kodein.Module("Presentation") {
 		KodeinViewModelFactory(kodein)
 	}
 	bind<HelloViewModel>() with provider {
-		HelloViewModel()
+		HelloViewModel(instance())
 	}
 }

@@ -1,11 +1,18 @@
 package com.example.clean.feature.hello
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import com.example.clean.usecase.GetGreetingUseCase
 
-class HelloViewModel : ViewModel() {
-	private val _greeting = MutableLiveData<String>("Hello world")
+class HelloViewModel(
+	private val getGreetingUseCase: GetGreetingUseCase
+) : ViewModel() {
 
-	val greeting: LiveData<String> get() = _greeting
+	val greeting: LiveData<String>
+		get() {
+			return getGreetingUseCase
+				.getGreeting()
+				.asLiveData()
+		}
 }
