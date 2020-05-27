@@ -47,4 +47,10 @@ dependencies {
 	api("androidx.core:core-ktx:1.2.0")
 	api("androidx.appcompat:appcompat:1.1.0")
 	api("androidx.constraintlayout:constraintlayout:1.1.3")
+
+	// Android lifecycle
+	api("androidx.fragment:fragment-ktx:1.2.4")
+	api("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0")
+	api("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
+	api("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
 }
