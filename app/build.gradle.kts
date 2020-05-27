@@ -48,4 +48,8 @@ dependencies {
 	implementation(kotlin("stdlib", kotlinVersion))
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
+
+	//kodein
+	implementation("org.kodein.di:kodein-di-generic-jvm:$kodeinVersion")
+	implementation("org.kodein.di:kodein-di-framework-android-x:$kodeinVersion")
 }

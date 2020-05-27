@@ -53,4 +53,8 @@ dependencies {
 	api("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0")
 	api("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
 	api("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+
+	//kodein
+	api("org.kodein.di:kodein-di-generic-jvm:$kodeinVersion")
+	api("org.kodein.di:kodein-di-framework-android-x:$kodeinVersion")
 }
