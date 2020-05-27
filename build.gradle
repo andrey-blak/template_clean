@@ -1,0 +1,33 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+buildscript {
+	ext.kotlinVersion = '1.3.72'
+	repositories {
+		google()
+		jcenter()
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:3.6.3'
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+		classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion"
+	}
+}
+
+allprojects {
+	repositories {
+		google()
+		jcenter()
+		mavenCentral()
+	}
+
+	tasks.withType(KotlinCompile).configureEach {
+		kotlinOptions {
+			jvmTarget = JavaVersion.VERSION_1_8
+		}
+	}
+}
+
+task clean(type: Delete) {
+	delete rootProject.buildDir
+}
