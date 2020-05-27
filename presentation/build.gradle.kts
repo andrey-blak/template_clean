@@ -30,6 +30,10 @@ android {
 			)
 		}
 	}
+
+	viewBinding {
+		isEnabled = true
+	}
 }
 
 dependencies {
