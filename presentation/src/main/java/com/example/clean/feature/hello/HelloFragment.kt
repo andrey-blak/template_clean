@@ -4,14 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.clean.core.CoreFragment
 import com.example.clean.presentation.databinding.FragmentHelloBinding
+import com.example.clean.util.kodeinViewModel
 
 class HelloFragment : CoreFragment<FragmentHelloBinding>() {
 
-	private val viewModel by viewModels<HelloViewModelImpl>()
+	private val viewModel: HelloViewModel by kodeinViewModel()
 
 	override fun createViewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentHelloBinding = FragmentHelloBinding.inflate(inflater)
 
