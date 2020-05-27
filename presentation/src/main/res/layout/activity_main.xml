@@ -5,4 +5,11 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	tools:context="com.example.clean.core.MainActivity">
+
+	<androidx.fragment.app.FragmentContainerView
+		android:id="@+id/main_hello"
+		android:name="com.example.clean.feature.hello.HelloFragment"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
 </FrameLayout>
